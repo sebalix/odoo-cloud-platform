@@ -217,7 +217,6 @@ class CloudPlatform(models.AbstractModel):
             self._check_swift(environment_name)
         self._check_redis(environment_name)
 
-    @api.model_cr
     def _register_hook(self):
         super(CloudPlatform, self)._register_hook()
         self.sudo().check()
